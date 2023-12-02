@@ -1,0 +1,46 @@
+---
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sunnyside Agency</title>
+    <meta name="author" content="Krystian Zieja" />
+    <meta name="description" content="sunnyside agency" />
+    <meta name="keywords" content="sunnyside, agency" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <slot />
+</body>
+</html>
+
+<style is:global>
+    body {
+        width : 100vw;
+        height : auto;
+        overflow-x: hidden;
+    }
+
+    *,*::before,*::after {
+        margin : 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --softRed: hsl(7, 99%, 70%);
+        --yellow: hsl(51, 100%, 49%);
+        --darkDesaturatedCyan: hsl(167, 40%, 24%);
+        --darkBlue: hsl(198, 62%, 26%);
+        --darkModerateCyan: hsl(168, 34%, 41%);
+        --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+        --veryDarkGrayishBlue: hsl(213, 9%, 39%);
+        --darkGrayishBlueL: hsl(232, 10%, 55%);
+        --grayishBlue: hsl(210, 4%, 67%);
+        --white: hsl(0, 0%, 100%);
+    }
+</style>
