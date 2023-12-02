@@ -2,19 +2,21 @@
 import Layout from '../layout/layout.astro';
 import Hero from '../components/Hero.astro';
 import Info from '../components/Info.astro';
-
-import egg from '../assets/images/desktop/image-transform.jpg';
-import pink from '../assets/images/desktop/image-stand-out.jpg';
+import {infoData} from "../utils/infoData";
 ---
 
 <Layout>
     <Hero />
-    <Info
-            flexDirection="row"
-            title="Transform your brand"
-            content="We are a full-service creative agency specializing in helping brands grow fast.Engage your clients through compelling visuals that do most of the marketing for you"
-            color="hsl(51, 100%, 49%)"
-            img={egg}
-            alt="egg image"
-    />
+    {
+        infoData.map(item => (
+                <Info
+                        flexDirection={item.flexDirection}
+                        title={item.title}
+                        content={item.content}
+                        color={item.color}
+                        img={item.img}
+                        alt={item.alt}
+                />
+        ))
+    }
 </Layout>
