@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+const {flexDirection, title, content, color, img, alt} = Astro.props;
+---
+
+<section class="Info">
+    <section class="Info__text">
+        <h2 class="Info__text__title">{ title }</h2>
+        <p class="Info__text__p">{ content }</p>
+        <a class="Info__text__anchor">Learn More</a>
+    </section>
+    <section class="Info__image">
+        <Image src={img} alt={alt} />
+    </section>
+</section>
+
+<style lang="scss" define:vars={{ flexDirection, color }}>
+    .Info {
+      display: flex;
+      flex-direction: var(--flexDirection);
+      width : 100vw;
+      height : 70vh;
+      min-height: 40rem;
+
+      &__text {
+        width : 50%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+          font-family: "Fraunces", sans-serif;
+          color: var(--veryDarkDesaturatedBlue);
+          font-weight: 700;
+          font-size: 3.5rem;
+          width : 60%;
+          max-width: 60%;
+        }
+
+        &__p {
+          font-family: "Barlow", sans-serif;
+          color: var(--darkGrayishBlue);
+          font-size: 1.3rem;
+          font-weight: 400;
+          opacity : 0.8;
+        }
+
+        &__anchor {
+          font-family: "Fraunces", sans-serif;
+          color: var(--veryDarkDesaturatedBlue);
+          font-weight: 700;
+          font-size: 1.3rem;
+          cursor: pointer;
+          text-decoration: none;
+          position: relative;
+          z-index: 1000;
+          display: block;
+        }
+
+        &__anchor::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width : 8.25ch;
+          height: .6rem;
+          background-color: var(--color);
+          z-index: -1;
+          transform: translateY(-.55ch);
+          border-radius: 1ch;
+          opacity : 0.5;
+
+          transition: opacity 250ms;
+        }
+
+        &__anchor:hover::after {
+          opacity : 1;
+        }
+
+        p,a {
+          width : 60%;
+          max-width: 60%;
+          text-align: left;
+          margin-top : 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &__image {
+        width : 50%;
+        height: 100%;
+
+        img {
+          width : 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+</style>
