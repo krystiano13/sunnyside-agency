@@ -1,15 +1,52 @@
 ---
-
+import {Image} from "astro:assets";
+import Logo from '../assets/images/logo.svg';
 ---
 
 <nav>
-
+    <Image src={Logo} alt="logo" decoding="async" />
+    <div class="links">
+        <a href="/">About</a>
+        <a href="/">Services</a>
+        <a href="/">Projects</a>
+        <a id="contact" href="/">CONTACT</a>
+    </div>
 </nav>
 
 <style lang="scss">
     nav {
       width : 100vw;
-      height: 20%;
+      height: 15%;
       min-height: 5rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding : 3rem;
+
+      .links {
+        a {
+          text-decoration: none;
+          font-family: 'Barlow', sans-serif;
+          color: var(--white);
+          font-size : 1.2rem;
+          margin-left : 3rem;
+          font-weight: 400;
+        }
+
+        #contact {
+          font-family: "Fraunces", sans-serif;
+          color: black;
+          background-color: var(--white);
+          border-radius: 2rem;
+          padding : 1rem;
+          font-size: 18px;
+        }
+      }
+
+      img {
+        width : auto;
+        height: 50%;
+      }
     }
 </style>

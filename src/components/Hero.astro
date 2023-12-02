@@ -7,7 +7,7 @@ import ArrowImage from '../assets/images/icon-arrow-down.svg';
 <section class="Hero">
     <Nav />
     <h1 class="Hero__title">WE ARE CREATIVES</h1>
-    <Image src={ArrowImage} alt="arrow down" />
+    <Image decoding="async" src={ArrowImage} alt="arrow down" />
 </section>
 
 <style lang="scss">
@@ -30,11 +30,12 @@ import ArrowImage from '../assets/images/icon-arrow-down.svg';
         font-weight: 900;
         letter-spacing: 1rem;
         font-size: 3.5rem;
-        margin-top: 8%;
+        margin-top: 9%;
+        text-align: center;
       }
 
       img {
-        margin-top: 4%;
+        margin-top: 5%;
         width : auto;
         height : 8rem;
       }
