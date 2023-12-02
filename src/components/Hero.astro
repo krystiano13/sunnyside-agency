@@ -1,0 +1,42 @@
+---
+import Nav from './Nav.astro';
+import { Image } from 'astro:assets';
+import ArrowImage from '../assets/images/icon-arrow-down.svg';
+---
+
+<section class="Hero">
+    <Nav />
+    <h1 class="Hero__title">WE ARE CREATIVES</h1>
+    <Image src={ArrowImage} alt="arrow down" />
+</section>
+
+<style lang="scss">
+    .Hero {
+      width : 100vw;
+      height : 100vh;
+      min-height: 30rem;
+      background-image: url('/image-header.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__title {
+        font-family: 'Fraunces', sans-serif;
+        color: var(--white);
+        font-weight: 900;
+        letter-spacing: 1rem;
+        font-size: 3.5rem;
+        margin-top: 8%;
+      }
+
+      img {
+        margin-top: 4%;
+        width : auto;
+        height : 8rem;
+      }
+    }
+</style>
