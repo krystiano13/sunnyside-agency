@@ -2,7 +2,9 @@
 import Layout from '../layout/layout.astro';
 import Hero from '../components/Hero.astro';
 import Info from '../components/Info.astro';
+import PhotoSection from '../components/PhotoSection.astro';
 import {infoData} from "../utils/infoData";
+import {photoData} from "../utils/photoData";
 ---
 
 <Layout>
@@ -18,5 +20,16 @@ import {infoData} from "../utils/infoData";
                         alt={item.alt}
                 />
         ))
+    }
+    {
+       photoData.map(item => (
+            <PhotoSection
+                title={item.title}
+                content={item.content}
+                color={item.color}
+                img={item.img}
+                alt={item.alt}
+            />
+       ))
     }
 </Layout>
