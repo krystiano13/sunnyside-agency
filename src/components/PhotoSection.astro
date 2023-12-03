@@ -9,23 +9,44 @@ const { img, alt, title, content, color } = Astro.props;
     <p class="PhotoSection__content">{content}</p>
 </section>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ color }}>
     .PhotoSection {
       width : 50vw;
       height : 65vh;
       float: left;
       min-height: 35rem;
 
+      @media screen and (orientation: portrait) and (max-width: 800px) {
+        width : 100vw;
+        height : 70vh;
+        min-height: 70vh;
+      }
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
 
-      h2,p {
+      &__title,&__content {
         position: relative;
-        max-width: 50%;
+        max-width: 45%;
         text-align: center;
         margin-bottom: 3rem;
+        color: var(--color);
+
+        @media screen and (orientation: portrait) and (max-width: 800px) {
+          max-width: 75%;
+        }
+      }
+
+      &__title {
+        font-family: "Fraunces", sans-serif;
+        font-size : 2.5rem;
+      }
+
+      &__content {
+        font-family: "Barlow", sans-serif;
+        font-size : 1.2rem;
       }
 
       img {
@@ -34,6 +55,12 @@ const { img, alt, title, content, color } = Astro.props;
         height: 65vh;
         min-height: 35rem;
         object-fit: cover;
+        object-position: center;
+        @media screen and (orientation: portrait) and (max-width: 800px) {
+          width: 100vw;
+          height : 70vh;
+          min-height: 25rem;
+        }
       }
     }
 </style>
