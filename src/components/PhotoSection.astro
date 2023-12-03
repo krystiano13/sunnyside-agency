@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+const { img, alt, title, content, color } = Astro.props;
+---
+
+<section class="PhotoSection">
+    <Image src={img} alt={alt} />
+    <h2 class="PhotoSection__title">{title}</h2>
+    <p class="PhotoSection__content">{content}</p>
+</section>
+
+<style lang="scss">
+
+</style>
