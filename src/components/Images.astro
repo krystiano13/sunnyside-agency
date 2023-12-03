@@ -19,9 +19,17 @@ import gallery4 from '../assets/images/desktop/image-gallery-sugarcubes.jpg';
       width : 100vw;
       display: flex;
 
+      @media screen and (orientation: portrait) and (max-width: 800px) {
+        flex-wrap: wrap;
+      }
+
       img {
         width : 25%;
         height: auto;
+
+        @media screen and (orientation: portrait) and (max-width: 800px) {
+          width : 50%;
+        }
       }
     }
 </style>
