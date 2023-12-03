@@ -1,13 +1,21 @@
 ---
-
+import { Image } from "astro:assets";
+import { testimonialsData } from "../utils/testimonialsData";
 ---
 
 <section class="Testimonials">
     <h2 class="Testimonials__title">CLIENT TESTIMONIALS</h2>
     <div class="Testimonials__items">
-        <section class="Testimonials__items__item">
-
-        </section>
+        {
+            testimonialsData.map(item => (
+                    <section class="Testimonials__items__item">
+                        <Image src={item.img} alt={item.alt} />
+                        <p class="Testimonials__items__item__text">{item.text}</p>
+                        <h3 class="Testimonials__items__item__name">{item.name}</h3>
+                        <p class="Testimonials__items__item__job">{item.job}</p>
+                    </section>
+            ))
+        }
     </div>
 </section>
 
