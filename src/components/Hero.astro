@@ -33,6 +33,8 @@ import ArrowImage from '../assets/images/icon-arrow-down.svg';
         margin-top: 9%;
         text-align: center;
 
+        animation: appear1 300ms;
+
         @media screen and (orientation: portrait) and (max-width: 800px) {
           font-size: 2rem;
           max-width: 100vw;
@@ -43,6 +45,36 @@ import ArrowImage from '../assets/images/icon-arrow-down.svg';
         margin-top: 5%;
         width : auto;
         height : 8rem;
+        animation: appear2 400ms;
+      }
+    }
+
+    @keyframes appear1 {
+      from {
+        transform: translateY(-100px);
+        opacity : 0;
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity : 1;
+      }
+    }
+
+    @keyframes appear2 {
+      0% {
+        transform: translateY(-100px);
+        opacity : 0;
+      }
+
+      50% {
+        transform: translateY(-100px);
+        opacity : 0;
+      }
+
+      100% {
+        transform: translateY(0px);
+        opacity : 1;
       }
     }
 </style>
