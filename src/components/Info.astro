@@ -7,7 +7,7 @@ const {flexDirection, title, content, color, img, alt, id} = Astro.props;
     <section data-aos="fade-up" class="Info__text">
         <h2 class="Info__text__title">{ title }</h2>
         <p class="Info__text__p">{ content }</p>
-        <a class="Info__text__anchor">Learn More</a>
+        <a href="#testimonials" class="Info__text__anchor">Learn More</a>
     </section>
     <section class="Info__image">
         <Image src={img} alt={alt} />
