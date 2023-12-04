@@ -1,15 +1,27 @@
 ---
 import {Image} from "astro:assets";
 import Logo from '../assets/images/logo.svg';
+import Hamburger from '../assets/images/icon-hamburger.svg';
 ---
 
 <nav>
-    <Image src={Logo} alt="logo" decoding="async" />
+    <Image id="logo" src={Logo} alt="logo" decoding="async" />
+    <button class="hamburger">
+        <Image src={Hamburger} alt="hamburger menu button" />
+    </button>
+
     <div class="links">
         <a href="/">About</a>
         <a href="/">Services</a>
         <a href="/">Projects</a>
         <a id="contact" href="/">CONTACT</a>
+    </div>
+
+    <div class="hamburgerMenu">
+        <a href="/">About</a>
+        <a href="/">Services</a>
+        <a href="/">Projects</a>
+        <a id="contactMenu" href="/">CONTACT</a>
     </div>
 </nav>
 
@@ -24,7 +36,52 @@ import Logo from '../assets/images/logo.svg';
       align-items: center;
       padding : 3rem;
 
+      .hamburgerMenu {
+        display: none;
+
+        @media screen and (orientation: portrait) {
+          display: flex;
+        }
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        width : 80vw;
+        margin-top : 20rem;
+        background-color: var(--white);
+
+        a {
+          text-decoration: none;
+          font-family: 'Barlow', sans-serif;
+          padding : 1rem;
+        }
+      }
+
+      .hamburger {
+        display: none;
+
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        img {
+          width : 2.5rem;
+          height: auto;
+        }
+
+        @media screen and (orientation: portrait) {
+          display: block;
+        }
+      }
+
       .links {
+
+        @media screen and (orientation: portrait) {
+          display: none;
+        }
+
         a {
           text-decoration: none;
           font-family: 'Barlow', sans-serif;
@@ -51,9 +108,14 @@ import Logo from '../assets/images/logo.svg';
         }
       }
 
-      img {
+      #logo {
         width : auto;
         height: 50%;
+
+        @media screen and (orientation: portrait) {
+          width : 6rem;
+          height: auto;
+        }
       }
     }
 </style>
