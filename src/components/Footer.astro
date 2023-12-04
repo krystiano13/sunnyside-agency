@@ -42,6 +42,10 @@ import instagram from '../assets/images/icon-instagram.svg';
           height: auto;
           margin-top: 1.5rem;
           margin-bottom: 1.5rem;
+
+          @media screen and (orientation: portrait) and (max-width: 600px) {
+            width : 14rem;
+          }
         }
       }
 
@@ -57,6 +61,11 @@ import instagram from '../assets/images/icon-instagram.svg';
           margin : 2rem;
 
           transition: color 125ms;
+
+          @media screen and (orientation: portrait) and (max-width: 600px) {
+            font-size : 1.1rem;
+            margin: 1rem;
+          }
         }
 
         a:hover {
@@ -73,6 +82,11 @@ import instagram from '../assets/images/icon-instagram.svg';
           height: auto;
           margin : 1rem;
           cursor: pointer;
+
+          @media screen and (orientation: portrait) and (max-width: 600px) {
+            width : 1.5rem;
+            margin: .75rem;
+          }
         }
 
         img:hover {
