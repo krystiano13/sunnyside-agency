@@ -17,7 +17,7 @@ import Hamburger from '../assets/images/icon-hamburger.svg';
         <a id="contact" href="/">CONTACT</a>
     </div>
 
-    <div class="hamburgerMenu">
+    <div id="menu" class="hamburgerMenu">
         <a href="/">About</a>
         <a href="/">Services</a>
         <a href="/">Projects</a>
@@ -39,12 +39,15 @@ import Hamburger from '../assets/images/icon-hamburger.svg';
       padding : 3rem;
       padding-right: 3rem;
 
-      .hamburgerMenu {
+      #menu {
         display: none;
 
         @media screen and (orientation: portrait) and (max-width: 850px) {
           display: flex;
         }
+      }
+
+      .hamburgerMenu {
 
         flex-direction: column;
         align-items: center;

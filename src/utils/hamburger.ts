@@ -15,3 +15,10 @@ hamburgerButton.addEventListener('click', ():void => {
         hamburgerMenu.style.display = 'none';
     }
 })
+
+window.addEventListener('resize', () => {
+    if(window.innerWidth >= window.innerHeight) {
+        shown = false;
+        hamburgerMenu.style.display = 'none';
+    }
+})
