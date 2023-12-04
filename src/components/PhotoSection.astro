@@ -5,8 +5,8 @@ const { img, alt, title, content, color, id } = Astro.props;
 
 <section id={id} class="PhotoSection">
     <Image src={img} alt={alt} />
-    <h2 class="PhotoSection__title">{title}</h2>
-    <p class="PhotoSection__content">{content}</p>
+    <h2 data-aos="fade-up" class="PhotoSection__title">{title}</h2>
+    <p data-aos="fade-up" class="PhotoSection__content">{content}</p>
 </section>
 
 <style lang="scss" define:vars={{ color }}>
