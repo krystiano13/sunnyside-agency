@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-const {flexDirection, title, content, color, img, alt} = Astro.props;
+const {flexDirection, title, content, color, img, alt, id} = Astro.props;
 ---
 
-<section class="Info">
+<section id={id} class="Info">
     <section class="Info__text">
         <h2 class="Info__text__title">{ title }</h2>
         <p class="Info__text__p">{ content }</p>

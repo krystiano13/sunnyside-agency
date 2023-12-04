@@ -8,6 +8,7 @@ type info = {
     alt: string;
     color: string;
     flexDirection: string;
+    id:string;
 }
 
 export const infoData:info[] = [
@@ -17,7 +18,8 @@ export const infoData:info[] = [
         color: "hsl(51, 100%, 49%)",
         flexDirection: "row",
         img: egg,
-        alt: "egg image"
+        alt: "egg image",
+        id: "info1"
     },
     {
         title: "Stand out to the right audience",
@@ -25,6 +27,7 @@ export const infoData:info[] = [
         color: "hsl(7, 99%, 70%)",
         flexDirection: "row-reverse",
         img: pink,
-        alt: "pink image"
+        alt: "pink image",
+        id: "info1"
     },
 ]
