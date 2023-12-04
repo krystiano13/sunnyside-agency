@@ -11,13 +11,13 @@ const { img, alt, title, content, color } = Astro.props;
 
 <style lang="scss" define:vars={{ color }}>
     .PhotoSection {
-      width : 50vw;
+      width : 50%;
       height : 65vh;
       float: left;
       min-height: 35rem;
 
       @media screen and (orientation: portrait) and (max-width: 800px) {
-        width : 100vw;
+        width : 100%;
         height : 70vh;
         min-height: 70vh;
       }
