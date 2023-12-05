@@ -22,3 +22,4 @@ window.addEventListener('resize', () => {
         hamburgerMenu.style.display = 'none';
     }
 })
+
